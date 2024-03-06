@@ -7,19 +7,19 @@ export const registerController = async(req,resp) => {
         const {name,email,password,phone,address}=req.body;
         //validation
         if(!name){
-            return resp.send({error:"Name is Required"});
+            return resp.send({message:"Name is Required"});
         }
         if(!email){
-            return resp.send({error:"email is Required"});
+            return resp.send({message:"email is Required"});
         }
         if(!password){
-            return resp.send({error:"password is Required"});
+            return resp.send({message:"password is Required"});
         }
         if(!phone){
-            return resp.send({error:"phone is Required"});
+            return resp.send({message:"phone is Required"});
         }
         if(!address){
-            return resp.send({error:"address is Required"});
+            return resp.send({message:"address is Required"});
         }
 
         //existing user
@@ -110,4 +110,11 @@ resp.status(200).send({
         })
     }
 
+}
+//test controller
+export const testController=(req,resp)=>{
+    resp.status(200).send({
+        success:true,
+        message:'Test APi working Successfully'
+    })
 }

@@ -1,0 +1,200 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* navBar CSS */
+.navbar{
+  font-family: 'Poppins';
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px; 
+  --webkit-box-shadow:0 8px 6px -6px;
+  border-bottom: 0.5px solid gray !important;
+}
+
+.nav-link{
+  font-weight: 300px;
+}
+
+.active{
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-family: 'roboto','sans-serif';
+  letter-spacing: 3px;
+}
+/*************Footer
+
+/* .footer{
+  color: white;
+  padding: 25px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 29%, rgba(190,112,112,1) 59%);
+}
+
+.footer {
+  background-color:blue;
+  padding: 20px; /* Add padding for better appearance 
+}
+
+ .footer a {
+  text-decoration: none; /* Remove underlines from links 
+  margin: 0 10px; /* Add spacing between links 
+} */
+
+
+.text-center{
+  color: black;
+}
+
+.footer a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.footer:hover{
+  border-bottom: 2px;
+
+}
+
+/*Page NOT Found CSS*/
+.page-not-found {
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+}
+
+/* Style for the heading */
+.page-not-found h1 {
+  color: black; /* You can customize the color */
+  font-size: 100px;
+}
+
+/* Style for the paragraph */
+.page-not-found p {
+  font-size: 18px;
+  color: #555; /* You can customize the color */
+}
+
+/* Style for the link (if you decide to add a link) */
+.page-not-found a {
+  color: #007bff; /* You can customize the color */
+  text-decoration: underline;
+}
+.page-not-found a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color:black; /* You can customize the color */
+  text-decoration: none;
+  border: 2px solid black; /* You can customize the border color */
+  border-radius: 5px; /* You can customize the border radius */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/* REGISTER PAGE CSSS*/
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.register{
+  margin:'20% 20% 10%';
+  box-shadow:'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset',
+}
+
+fieldset {
+  display: flex;
+  width: 480px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+sup {
+  color: red;
+  top: -2px;
+  font-size: 95%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+input,
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 32px;
+  padding: 0 8px;
+}
+
+.Field {
+  position: relative;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.FieldError {
+  position: absolute;
+  bottom: -6px;
+  color: red;
+  font-size: 12px;
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  padding: 12px;
+  width: 240px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: darkblue;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.background-container{
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
