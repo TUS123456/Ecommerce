@@ -3,21 +3,25 @@ import Layout from "../../components/Layout/Layout";
 import {toast} from 'react-toastify'
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import '../../styles/AuthStyles.css'
+
+
 const Register = () => {
 
   // STATE ARE CREATED TO ASSIGN  VALUE 
-  const [name,setname]=useState("")
+  const [name,setname]=useState(" ")
   const [email,setemail]=useState("");
   const [password,setpassword]=useState("")
   const [phone,setphone]=useState("");
   const [address,setaddress]=useState("");
+  const [answer,setanswer]=useState("");
   const Navigate=useNavigate();
 
   //FORM FUNCTION ON SUBMIT
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-      const response=await axios.post(`/api/v1/auth/register`,{name,email,password,phone,address});
+      const response=await axios.post(`/api/v1/auth/register`,{name,email,password,phone,address,answer});
       if(response.data.success){
         toast.success(response.data.message);
         Navigate('/login')
@@ -35,7 +39,7 @@ const Register = () => {
 
   return (
     <Layout title="Register E-commerce App">
-      <div className="register">
+      <div className="form-cotaier">
         <form onSubmit={handleSubmit}
         
         style={{margin: '20% 20% 10%',
@@ -57,6 +61,7 @@ const Register = () => {
             <div className="Field">
               <label>Email address <sup>*</sup></label>
               <input type="email" 
+              className="form-control"
               value={email}
               onChange={(e)=>{
                 setemail(e.target.value)
@@ -98,6 +103,17 @@ const Register = () => {
               placeholder="Enter Address" 
               required
               />
+              <div className="Field">
+              <label>Answer <sup>*</sup></label>
+              <input type="text" 
+              value={answer}
+              onChange={(e)=>{
+                setanswer(e.target.value)
+              }}
+              placeholder="Your First School Name"
+              required
+              />
+            </div>
             </div>
             <button type="submit">
               Create account

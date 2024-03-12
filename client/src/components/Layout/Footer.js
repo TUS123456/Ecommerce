@@ -6,16 +6,17 @@ const Footer = () => {
     <div style={{
        color: 'white',
        padding: '25px',
-       background: 'linear-gradient(90deg, rgba(2,0,36,1) 29%, rgba(190,112,112,1) 59%)'
+       background: 'rgb(0,0,0)',
+      background: 'radial-gradient(circle, rgba(0,0,0,1) 1%, rgba(0,0,0,1) 59%)',
+
     }} className='footer'>
       <h4 className='text-center'>All Right Reserved</h4>
       <p className='text-center mt-3'>
-      <Link to='/about'> About</Link>
-      |
-      <Link to='/contact'> Contact</Link>
-      |
-      <Link to='/policy'> Privacy Policy</Link>
-
+      <div style={{ color: 'white' }}>
+  <Link to='/about' style={{ color: 'white', textDecoration: 'none' }}>About</Link> |
+  <Link to='/contact' style={{ color: 'white', textDecoration: 'none' }}>Contact</Link> |
+  <Link to='/policy' style={{ color: 'white', textDecoration: 'none' }}>Privacy Policy</Link>
+</div>
       </p>
     </div>
   )
